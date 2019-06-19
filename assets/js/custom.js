@@ -1,17 +1,11 @@
-$(document).ready( function(){
-    var scroll_start = 0;
-    var start_change = $('#change-navbar-here');
-    var offset = start_change.offset();
+$(document).scroll( function(){
+    var $element = $('.navbar');
+    var navbarCustomClass = 'navbar-when-scrolled';
 
-    if (start_change.length) {
-        $(document).scroll(function(params) {
-            scroll_start = $(this).scrollTop();
-
-            if (scroll_start > offset.top) {
-                $('.navbar-custom').css('background-color', 'rgba(0, 186, 225, 1)');
-            } else {
-                $('.navbar-custom').css('background-color', 'rgba(0, 186, 225, 0)');
-            }
-        })
+    if ($(document).scrollTop() >= 100) {
+        // If user scrolled more than 100 pixel
+        $element.addClass(navbarCustomClass);
+    } else {
+        $element.removeClass(navbarCustomClass);
     }
-})
+});

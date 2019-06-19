@@ -8,13 +8,25 @@ body{
 
 h4 {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 15px;
 }
 
 .navbar-brand {
     font-family: viga, sans-serif;
     font-size: 32px;
+}
+
+.nav-link {
+    font-weight: 600;
+}
+
+.navbar-dark .navbar-toggler {
+    border: 2px solid white;
+}
+
+.navbar-when-scrolled {
+    background-color: rgba(0, 186, 225, 1);
 }
 
 /* Jumbotron */
@@ -126,9 +138,13 @@ h4 {
 @media (max-width: 991px){
 
     .navbar {
-        background-color: white;
+        background-color: rgba(0, 186, 225, 1);
     }
     
+    .navbar-brand {
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    }
+
     .what-is-hadds-section .featured-text::before {
         content: '';
         display: block;
@@ -167,6 +183,7 @@ h4 {
     .navbar-brand, .nav-link {
         color: white !important;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+        font-weight: 700;
     }
 
     .nav-link {
@@ -183,6 +200,16 @@ h4 {
         margin-bottom: -8px;
     }
     
+    .navbar-when-scrolled .nav-link:hover::after {
+        content: '';
+        display: block;
+        border-bottom: 1px solid #ffffff;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+
     .jumbotron {
         background-position: bottom center;
         margin-top: -75px;

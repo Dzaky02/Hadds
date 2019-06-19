@@ -2,7 +2,7 @@
 <!-- Jumbotron -->
   <div class="jumbotron jumbotron-fluid img-fluid d-flex align-items-center justify-content-center">
     <div class="container">
-      <h1 class="display-4" id="change-navbar-here"><span>Selamat Datang</span> di website kami</h1>
+      <h1 class="display-4"><span>Selamat Datang</span> di website kami</h1>
       <p class="lead">Website penyedia informasi mengenai tingkat keramaian di gedung Fakultas Ilmu Terapan.</p>
       <div class="row d-flex align=items-center justify-content-center indicator-helper">
         <div class="d-flex align=items-center justify-content-center sroll-down-indicator">

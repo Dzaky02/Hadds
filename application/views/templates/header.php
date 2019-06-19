@@ -23,7 +23,7 @@ font-family: 'Varela Round', sans-serif; -->
   <body>
 
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-custom">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
 			<div class="container">
 				<a class="navbar-brand" href="#">HADDS</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
