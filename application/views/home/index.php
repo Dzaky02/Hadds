@@ -2,7 +2,7 @@
 <!-- Jumbotron -->
   <div class="jumbotron jumbotron-fluid img-fluid d-flex align-items-center justify-content-center">
     <div class="container">
-      <h1 class="display-4"><span>Selamat Datang</span> di website kami</h1>
+      <h1 class="display-4">Selamat Datang di website kami</h1>
       <p class="lead">Website penyedia informasi mengenai tingkat keramaian di gedung Fakultas Ilmu Terapan.</p>
       <div class="row d-flex align=items-center justify-content-center indicator-helper">
         <div class="d-flex align=items-center justify-content-center sroll-down-indicator">
@@ -15,8 +15,8 @@
   </div>
 <!-- Akhir Jumbotron -->
 
-<!-- Tentang Hadds -->
-  <section id="what-is-hadds" class="what-is-hadds-section">
+<!-- Tentang Hadds Section -->
+  <section id="definition" class="definition-section">
     <div class="container">
       <div class="row align-items-center mb-4 ml-lg-5">
         <div class="col-xl-8 col-lg-7">
@@ -33,4 +33,25 @@
       </div>
     </div>
   </section>
-<!-- Akhir Tentang Hadds -->
+<!-- Akhir Section Tentang Hadds -->
+
+<!-- Kegunaan Section -->
+  <section id="purpose" class="purpose-section">
+    <div class="container vertical-align">
+      <div class="row purpose-row align-items-center text-center px-5">
+        <div class="col-md mx-3 my-2">
+          <span>Icon 1</span>
+          <p class="text-black-50 mb-0 mt-3">Membantu proses analisa tingkat keramaian FIT pada tiap lantai</p>
+        </div>
+        <div class="col-md mx-3 my-2">
+          <span>Icon 2</span>
+          <p class="text-black-50 mb-0 mt-3">Medapat menjadi refrensi untuk pemasagan media informasi yang strategis</p>
+        </div>
+        <div class="col-md mx-3 my-2">
+          <span>Icon 3</span>
+          <p class="text-black-50 mb-0 mt-3">Heatmap yang di tampilkan dapat disesuaikan dengan waktu yang diinginkan</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Akhir Section Kegunaan -->
