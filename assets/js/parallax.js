@@ -1,7 +1,6 @@
 
 $(window).scroll(function() {
     parallax();
-    parallaxPurpose();
 })
 
 function parallax() {

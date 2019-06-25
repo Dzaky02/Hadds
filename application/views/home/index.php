@@ -60,9 +60,18 @@
 
 <!-- TODO: Heatmap Section -->
   <section id="heatmap" class="heatmap-section">
-    
+    <div class="container justify-content-center my-3">
+      <div class="row">
+        <div class="col text-center">
+          <h3>HEATMAP</h3>
+        </div>
+      </div>
+      <div class="row"></div>
+    </div>
   </section>
-  <section></section>
+  <section id="mapbox" class="maps-section">
+    <div class="map" id="map"></div>
+  </section>
 <!-- Akhir Section Heatmap -->
 
 <!-- Team Section -->
