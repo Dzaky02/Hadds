@@ -5,6 +5,32 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
     <!-- My JS File -->
-    <script src="<?= base_url(); ?>assets/js/custom.js"></script>
+    <script src="<?= base_url(); ?>assets/js/jquery-3.4.1.min.js"></script>
+    <script src="<?= base_url(); ?>assets/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="<?= base_url(); ?>assets/js/swiper.min.js"></script>
+    <script type="text/javascript" src="<?= base_url(); ?>assets/js/parallax.js"></script>
+    <script type="text/javascript"  src="<?= base_url(); ?>assets/js/custom.js"></script>
+    <script type="text/javascript"  src="<?= base_url(); ?>assets/js/auto-scroll.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        initialSlide : 1,
+        coverflowEffect: {
+          rotate: 10,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows : true,
+        },
+      });
+    </script>
+    <!-- 
+        pagination: {
+          el: '.swiper-pagination',
+        }, -->
   </body>
 </html>

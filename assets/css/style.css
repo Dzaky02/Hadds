@@ -4,12 +4,42 @@ body{
     font-size: 16px;
     font-weight: 400;
     text-align: justify;
+    transform-style: preserve-3d;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+h2 {
+    color: white;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+h2::after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid white;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+}
+
+.parallax--bg{
+    transition: initial;
 }
 
 h4 {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 15px;
+}
+
+/* Icon */
+.icon-purpose {
+    width: 50px;
+    height: 50px;
 }
 
 /* positioning */
@@ -19,7 +49,27 @@ h4 {
     transform: translateY(-50%);
 }
 
+/* Swiper Sider */
+.swiper-container {
+    width: 100%;
+    padding-top: 200px;
+    padding-bottom: 50px;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 400px !important;
+    height: 488px !important;
+}
+.swiper-slide img {
+    width: 100%;
+}
+
 /* Navbar */
+.navbar {
+    transition: .5s;
+}
+
 .navbar-brand {
     font-family: viga, sans-serif;
     font-size: 32px;
@@ -39,11 +89,11 @@ h4 {
 
 /* Jumbotron */
 .jumbotron {
-    background-image: url(../img/jumbotron-fit.jpg);
+    background-image: url(../img/background/jumbotron-fit.jpg);
     background-size: cover;
     height: 650px;
-    background-attachment: fixed;
-    background-position: bottom right;
+    margin-bottom: 0px;
+    background-position: center;
     color: white;
     text-align: center;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
@@ -118,9 +168,8 @@ h4 {
 }
 
 .purpose-section {
-    background-image: url(../img/depan-fit.jpg);
+    background-image: url(../img/background/depan-fit.jpg);
     background-size: cover;
-    background-attachment: fixed;
     background-position: center;
     height: 400px;
     position: relative;
@@ -144,10 +193,39 @@ h4 {
 .purpose-row .col-md {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 20px;
-    padding-bottom: 5%;
-    padding-top: 5%;
+    padding-bottom: 3%;
+    padding-top: 3%;
     position: relative;
     z-index: 1;
+}
+
+.heatmap-section {
+    height: 550px;
+}
+
+/* Team Section */
+.team-section {
+    background-image: url(../img/background/team-bg-5.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    padding-top: 50px;
+    position: relative;
+}
+
+.team-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.team-section::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(6, 168, 202, 0.9), rgba(55, 154, 143, 0.8));
+    position: absolute;
+    bottom: 0;
 }
 
 /* PHONE VERSION */
@@ -170,6 +248,22 @@ h4 {
         margin-top: 10%;
     }
   
+}
+
+@media (max-width: 767px){
+    
+    .purpose-section {
+        height: 600px;
+    }
+
+    .team-section {
+        height: 550px;
+    }
+
+    .swiper-slide {
+        width: 250px !important;
+        height: 338px !important;
+    }
 }
 
 @media (max-width: 991px){
@@ -216,7 +310,11 @@ h4 {
 
 
 @media (min-width: 768px) and (max-width: 991px) {
-     
+    
+    .team-section {
+        height: 680px;
+    }
+
     .purpose-row .col-md {
         height: 230px;
     }
@@ -257,7 +355,7 @@ h4 {
     }
 
     .jumbotron {
-        background-position: bottom center;
+        background-position: center;
         margin-top: -75px;
         height: 755px;
     }
@@ -284,5 +382,11 @@ h4 {
        
     .purpose-row .col-md {
         height: 200px;
+    }
+}
+
+@media (min-width: 1024px){
+    .team-section {
+        height: 664px;
     }
 }
