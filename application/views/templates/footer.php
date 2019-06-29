@@ -8,30 +8,9 @@
     <script src="<?= base_url(); ?>assets/js/jquery-3.4.1.min.js"></script>
     <script src="<?= base_url(); ?>assets/js/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="<?= base_url(); ?>assets/js/swiper.min.js"></script>
-    <script type="text/javascript" src="<?= base_url(); ?>assets/js/parallax.js"></script>
     <script type="text/javascript"  src="<?= base_url(); ?>assets/js/custom.js"></script>
-    <script type="text/javascript"  src="<?= base_url(); ?>assets/js/auto-scroll.js"></script>
     <script type="text/javascript"  src="<?= base_url(); ?>assets/js/mapbox.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper('.swiper-container', {
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        initialSlide : 1,
-        coverflowEffect: {
-          rotate: 10,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows : true,
-        },
-      });
-    </script>
-    <!-- 
-        pagination: {
-          el: '.swiper-pagination',
-        }, -->
+    <script type="text/javascript"  src="<?= base_url(); ?>assets/js/moment.min.js"></script>
+    <script type="text/javascript"  src="<?= base_url(); ?>assets/js/daterangepicker.js"></script>
   </body>
 </html>

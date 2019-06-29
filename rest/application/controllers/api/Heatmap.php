@@ -91,8 +91,8 @@ class Heatmap extends REST_Controller {
             {
                 // Set the response and exit
                 $this->response([
-                    'status' => TRUE,
-                    'data' => $coordinates
+                    'type' => "FeatureCollection",
+                    'features' => $coordinates
                 ], REST_Controller::HTTP_OK); // OK (200) being the HTTP response code
             } else {
                 // Set the response and exit
@@ -118,8 +118,8 @@ class Heatmap extends REST_Controller {
                 {
                     // Set the response and exit
                     $this->response([
-                        'status' => TRUE,
-                        'data' => $coordinateAt
+                        'type' => "FeatureCollection",
+                        'features' => $coordinateAt
                     ], REST_Controller::HTTP_OK); // OK (200) being the HTTP response code
                 } else {
                     // Set the response and exit

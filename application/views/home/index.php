@@ -25,10 +25,10 @@
           <img class="img-fluid mb-3 mb-lg-0" src="<?= base_url(); ?>assets/img/background/lobby-fit.jpg" alt="image">
         </div>
         <div class="col-xl-4 col-lg-5">
-          <div class="featured-text text-center text-lg-left">
+          <div class="featured-text">
             <h4>Apa itu HADDS ?</h4>
             <p class="text-black-50 mb-0">
-            Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!
+            Hadds merupakan website yang menampilkan data tingkat keramaian pada gedung Fakultas Ilmu Terapan Telkom University. Tingkat keramaian tersebut ditampilkan dalam bentuk heatmap pada peta <em>indoor</em>, guna membantu analisa untuk tata letak media informasi maupun iklan.
             </p>
           </div>
         </div>
@@ -60,13 +60,34 @@
 
 <!-- TODO: Heatmap Section -->
   <section id="heatmap" class="heatmap-section">
-    <div class="container justify-content-center my-3">
-      <div class="row">
-        <div class="col text-center">
-          <h3>HEATMAP</h3>
+    <div class="container justify-content-center mt-3">
+      <form>
+        <div class="form-row justify-content-center">
+          <div class="form-group col-md-4">
+            <label for="inputFloor">Pilih Lantai</label>
+            <select id="inputFloor" class="form-control">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputDateRange">Rentang Tanggal</label>
+            <input type="text" class="form-control" id="inputDateRange">
+          </div>
+          <div class="form-group col-md-2 d-flex justify-content-center mb-0">
+            <div class="form-check align-self-center">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                Lihat Rekomendasi
+              </label>
+            </div>
+          </div>
+          <div class="from-group col-md-2 d-flex justify-content-center btn-grup">
+            <button type="submit" name="submitFilter" id="submitFilter" class="btn btn-primary align-self-center mr-2">Filter</button>
+            <button type="submit" name="submitFilter" id="submitFilter" class="btn btn-primary align-self-center ml-2">Filter</button>
+          </div>
         </div>
-      </div>
-      <div class="row"></div>
+      </form>
     </div>
   </section>
   <section id="mapbox" class="maps-section">
@@ -89,7 +110,7 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="card">
-              <img src="<?= base_url(); ?>assets/img/team/member-real.jpg" class="card-img-top" alt="...">
+              <img src="<?= base_url(); ?>assets/img/team/dzaky.jpg" class="card-img-top" alt="...">
               <div class="card-body text-center">
                 <h5 class="mb-0" style="font-weight: 700">Ahmad Dzaky Abrori</h5>
                 <p class="mb-0">Back End Developer</p>
@@ -98,19 +119,19 @@
           </div>
           <div class="swiper-slide">
             <div class="card">
-              <img src="<?= base_url(); ?>assets/img/team/member-real.jpg" class="card-img-top" alt="...">
+              <img src="<?= base_url(); ?>assets/img/team/pramana.png" class="card-img-top" alt="...">
               <div class="card-body text-center">
-                <h5 class="mb-0" style="font-weight: 700">Ahmad Dzaky Abrori</h5>
+                <h5 class="mb-0" style="font-weight: 700">Pramana Putra</h5>
                 <p class="mb-0">Front End Developer</p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="card">
-              <img src="<?= base_url(); ?>assets/img/team/member-real.jpg" class="card-img-top" alt="...">
+              <img src="<?= base_url(); ?>assets/img/team/pak_fathah.jpg" class="card-img-top" alt="...">
               <div class="card-body text-center">
-                <h5 class="mb-0" style="font-weight: 700">Ahmad Dzaky Abrori</h5>
-                <p class="mb-0">Pembimbing</p>
+                <h5 class="mb-0" style="font-weight: 700">Fat’hah Noor Prawita, ST., MT.</h5>
+                <p class="mb-0">Dosen Pembimbing</p>
               </div>
             </div>
           </div> 

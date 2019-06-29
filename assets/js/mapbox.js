@@ -4,7 +4,7 @@ var map = new mapboxgl.Map({
     container: 'map', // Container id
     style: 'mapbox://style/mapbox/streets-v11',
     center: [107.632584, -6.973212], // starting position FIT Telkom
-    zoom: 18 // Starting zoom
+    zoom: 19 // Starting zoom
 });
             
 map.on('load', function(){
@@ -17,7 +17,7 @@ map.on('load', function(){
                 [107.6321, -6.97269], //top left
                 [107.6331, -6.97269], //top right
                 [107.6331, -6.97369], //bottom right
-                [107.6321, -6.97369] //bottom left
+                [107.6321, -6.97369]  //bottom left
             ]
         }
     );
@@ -29,7 +29,7 @@ map.on('load', function(){
 //                     [107.6321, -6.97269], //top left
 //                     [107.6331, -6.97269], //top right
 //                     [107.6331, -6.97369], //bottom right
-//                     [107.6321, -6.97369] //bottom left
+//                     [107.6321, -6.97369]  //bottom left
 //                 ]
 //     }); 
 // }, 1000);
@@ -50,7 +50,7 @@ map.on('load', function(){
         "id": "earthquakes-heat",
         "type": "heatmap",
         "source": "earthquakes",
-        "maxzoom": 9,
+        "maxzoom": 20,
         "paint": {
             // Increase the heatmap weight based on frequency and property magnitude
             "heatmap-weight": [
@@ -77,11 +77,11 @@ map.on('load', function(){
                 ["linear"],
                 ["heatmap-density"],
                 0, "rgba(33,102,172,0)",
-                0.2, "rgb(103,169,207)",
-                0.4, "rgb(209,229,240)",
-                0.6, "rgb(253,219,199)",
-                0.8, "rgb(239,138,98)",
-                1, "rgb(178,24,43)"
+                0.2, "rgb(0,0,255)",   //Blue
+                0.4, "rgb(0,255,255)", //Cyan
+                0.6, "rgb(0,255,0)",   //Green
+                0.8, "rgb(255,255,0)", //Yellow
+                1, "rgb(255,0,0)"      //Red
             ],
             // Adjust the heatmap radius by zoom level
             "heatmap-radius": [

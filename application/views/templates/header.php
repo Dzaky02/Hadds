@@ -21,14 +21,15 @@ font-family: 'Varela Round', sans-serif; -->
     <!-- My CSS -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/style.css">
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/swiper.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>assets/css/daterangepicker.css">
 
     <title><?= $judul; ?></title>
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#navbarNavAltMarkup">
 
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" id="mainNav">
 			<div class="container">
 				<a class="navbar-brand page-scroll" href="#home">HADDS</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +37,7 @@ font-family: 'Varela Round', sans-serif; -->
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav ml-auto">
-						<a class="nav-item nav-link page-scroll" href="#definition">Apa itu HADDS ? <span class="sr-only">(current)</span></a>
+						<a class="nav-item nav-link page-scroll active" href="#definition">Apa itu HADDS ?</a>
 						<a class="nav-item nav-link page-scroll" href="#heatmap">Heatmap</a>
 						<a class="nav-item nav-link page-scroll" href="#team">Tentang Kami</a>
 					</div>
