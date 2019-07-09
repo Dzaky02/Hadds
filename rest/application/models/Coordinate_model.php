@@ -50,8 +50,8 @@ class Coordinate_model extends CI_Model {
                     'geometry' => array(
                         'type' => "Point",
                         'coordinates' => array(
-                            (float)$row['latitude_coordinate'],
-                            (float)$row['longitude_coordinate']
+                            (float)$row['longitude_coordinate'],
+                            (float)$row['latitude_coordinate']
                         )
                     )
                 ));

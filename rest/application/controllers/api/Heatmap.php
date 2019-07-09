@@ -97,8 +97,17 @@ class Heatmap extends REST_Controller {
             } else {
                 // Set the response and exit
                 $this->response([
-                    'status' => FALSE,
-                    'message' => 'Tidak ditemukan koordinat heatmap untuk lantai ini'
+                    'type' => 'FeatureCollection', 
+                    'features' => array(
+                            array(
+                                'type' => 'Feature',
+                                'properties' => null,
+                                'geometry' => array(
+                                    'type' => "Point",
+                                    'coordinates' => [0,0]
+                                )
+                            )
+                        )
                 ], REST_Controller::HTTP_OK); // NOT_FOUND (404) being the HTTP response code
             }
 
@@ -124,8 +133,17 @@ class Heatmap extends REST_Controller {
                 } else {
                     // Set the response and exit
                     $this->response([
-                        'status' => FALSE,
-                        'message' => 'Tidak ditemukan koordinat heatmap pada tanggal tersebut'
+                        'type' => 'FeatureCollection', 
+                        'features' => array(
+                                array(
+                                    'type' => 'Feature',
+                                    'properties' => null,
+                                    'geometry' => array(
+                                        'type' => "Point",
+                                        'coordinates' => [0,0]
+                                    )
+                                )
+                            )
                     ], REST_Controller::HTTP_OK); // NOT_FOUND (404) being the HTTP response code
                 }
 

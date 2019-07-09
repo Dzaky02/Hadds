@@ -1,4 +1,18 @@
-
+<style type='text/css'>
+#info {
+display: block;
+position: relative;
+margin: 0px auto;
+width: 50%;
+padding: 10px;
+border: none;
+border-radius: 3px;
+font-size: 12px;
+text-align: center;
+color: #222;
+background: #fff;
+}
+</style>
 <!-- Jumbotron -->
   <div class="jumbotron jumbotron-fluid img-fluid d-flex align-items-center justify-content-center parallax--bg">
     <div class="container">
@@ -58,42 +72,46 @@
   </section>
 <!-- Akhir Section Kegunaan -->
 
-<!-- TODO: Heatmap Section -->
+<!-- TODO: Heatmap Filter Section -->
   <section id="heatmap" class="heatmap-section">
     <div class="container justify-content-center mt-3">
       <form>
         <div class="form-row justify-content-center">
-          <div class="form-group col-md-4">
+          <div class="form-group col-md-5">
             <label for="inputFloor">Pilih Lantai</label>
-            <select id="inputFloor" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
+            <select class="form-control" id="inputFloor" name="inputFloor">
+              <?php foreach( $floors as $floor ) : ?>
+                <option value="<?= $floor['id_floor'] ?>"><?= $floor['floor_name'] ?></option>
+              <?php endforeach; ?>
             </select>
           </div>
-          <div class="form-group col-md-4">
+          <div class="form-group col-md-5">
             <label for="inputDateRange">Rentang Tanggal</label>
-            <input type="text" class="form-control" id="inputDateRange">
+            <input type="text" class="form-control" id="inputDateRange" name="inputDateRange" placeholder="rentang tanggal" >
           </div>
           <div class="form-group col-md-2 d-flex justify-content-center mb-0">
             <div class="form-check align-self-center">
-              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck">
               <label class="form-check-label" for="gridCheck">
                 Lihat Rekomendasi
               </label>
             </div>
           </div>
-          <div class="from-group col-md-2 d-flex justify-content-center btn-grup">
-            <button type="submit" name="submitFilter" id="submitFilter" class="btn btn-primary align-self-center mr-2">Filter</button>
-            <button type="submit" name="submitFilter" id="submitFilter" class="btn btn-primary align-self-center ml-2">Filter</button>
-          </div>
+          <!-- <div class="from-group col-md-1 d-flex justify-content-center btn-grup">
+            <button type="button" name="submitFilter" id="submitFilter" class="btn btn-primary align-self-center mr-2">Filter</button>
+            <button type="reset" name="resetFilter" id="resetFilter" class="btn btn-outline-dark align-self-center ml-2">Reset</button>
+          </div> -->
         </div>
       </form>
     </div>
   </section>
   <section id="mapbox" class="maps-section">
-    <div class="map" id="map"></div>
+    <div class="map" id="map">
+      <nav id="menu-map"></nav>
+    </div>
+    <pre id='info'></pre>
   </section>
-<!-- Akhir Section Heatmap -->
+<!-- Akhir Section Heatmap Filter -->
 
 <!-- Team Section -->
   <section id="team" class="team-section parallax--bg">
@@ -142,3 +160,11 @@
     </div>
   </section>
 <!-- Akhir Section Team -->
+<!-- Footer -->
+<section id="footer">
+    <div class="row justify-content-md-center">
+      <div class="col d-flex align-items-center justify-content-center">
+        <div class="float-left ml-3">&copy; Two Pilot</div>&nbsp;&nbsp;&nbsp; <img src="<?= base_url(); ?>assets/img/icon/two_pilot.png" style="height:30px;potition:fixed;">
+      </div>
+    </div>
+</section>
